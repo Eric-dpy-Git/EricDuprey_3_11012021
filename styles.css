@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url("fonts/Shrikhand-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("fonts/Roboto-Regular.ttf");
+}
+
+.headup__logodiv--title {
+  font-family: Shrikhand, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+}
