@@ -31,6 +31,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
 .logodiv__title {
   font-family: Shriklhand-R;
@@ -225,4 +226,7 @@ footer {
       padding: 5px 0;
     }
   }
+}
+.img__restaurant {
+  max-width: 100%;
 }
