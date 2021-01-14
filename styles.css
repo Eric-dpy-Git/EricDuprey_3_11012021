@@ -17,15 +17,22 @@
 }
 /* Général style */
 body {
-  width: 360px;
+  /*  width: 360px; */
   margin: 0;
   padding: 0;
   font-family: Roboto-R;
 }
 
 .page-wrapper {
-  width: 350px;
+  min-width: 360px;
   margin: 0 auto;
+}
+
+.responsive__wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .logodiv__title {
@@ -43,12 +50,13 @@ body {
 .section__restaurant--title {
   font-size: 26px;
   font-family: Roboto-B;
-  margin: 0 0 0 10px;
+  margin: 30px 0 30px 10px;
 }
 
 /* header, sections, aside, footer styles */
 header {
-  width: 100%;
+  max-width: 100%;
+  min-width: 360px;
   height: 60px;
   border-bottom: solid 3px #d6cece;
 }
@@ -57,20 +65,25 @@ header {
 .section__localization {
   background-color: #eaeaea;
   width: 100%;
+  min-width: 360px;
   height: 50px;
 }
-.section__localization .form__localization {
+
+.form__localization {
+  width: 100%;
   margin: 0 auto;
   padding: 15px 0;
 }
-.section__localization .form__localization .localization__btn,
-.section__localization .form__localization .localization__field {
+.form__localization .localization__btn,
+.form__localization .localization__field {
   border: none;
   background-color: #eaeaea;
 }
 
 /* Catchphrase & submit btn */
 .section__catchphrase {
+  max-width: 100%;
+  min-width: 360px;
   background-color: #f6f6f6;
   padding: 25px 0;
   margin: 0 0 35px 0;
@@ -94,6 +107,11 @@ header {
   box-shadow: 5px 5px 5px lightgray;
 }
 
+aside {
+  max-width: 100%;
+  min-width: 360px;
+}
+
 .element__guidelines {
   width: 90%;
   height: 100px;
@@ -113,13 +131,11 @@ header {
   font-weight: bolder;
   margin: 45px 0 0 0;
 }
-
-.guidlines__icon {
+.element__guidelines .guidlines__icon {
   font-size: 1.5em;
   margin: 45px 10px 0 0;
 }
-
-.guidelines__text {
+.element__guidelines .guidelines__text {
   font-size: 1em;
   margin: 50px 50px 0 0;
 }
@@ -127,20 +143,29 @@ header {
 /* Restaurant section */
 .section__restaurants {
   background-color: #f6f6f6;
-  height: 1300px;
+  min-width: 330px;
+  max-width: 720px;
+  max-height: 1350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 60px 0 0 0;
+  padding: 0 0 40px 0;
 }
 
 .article__box {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
-  height: 90%;
+  min-width: 360px;
+  height: 85%;
 }
 
 .restaurant__box {
-  width: 350px;
+  width: 330px;
   height: 260px;
   border-radius: 20px;
   margin: 0 0 20px 0;
@@ -153,7 +178,7 @@ header {
 }
 
 .img__cover {
-  width: 350px;
+  width: 330px;
   height: 190px;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
@@ -197,7 +222,8 @@ header {
 
 footer {
   background-color: #3b3b3b;
-  width: 100%;
+  max-width: 100%;
+  min-width: 330px;
   height: 200px;
   color: white;
   display: flex;
