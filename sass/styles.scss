@@ -227,6 +227,43 @@ footer {
     }
   }
 }
+/* for menu pages */
 .img__restaurant {
   max-width: 100%;
+  min-width: 360px;
+  min-height: 350px;
+  max-height: 100%;
+}
+.box__main--menu {
+  max-width: 1500px;
+  min-width: 360px;
+  min-height: 350px;
+  max-height: 100%;
+  display: flex;
+
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  bottom: 60px;
+  background-color: #99e2d0;
+}
+.flex__menu {
+  max-width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  background-color: antiquewhite;
+}
+.restaurant__title--box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 0 10px;
+  h2 {
+    font-family: Shriklhand-R;
+  }
+}
+.meal__box {
+  width: 1000px;
+  height: 50px;
+  background-color: #f6f6f6;
 }
