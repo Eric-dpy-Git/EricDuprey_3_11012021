@@ -162,13 +162,27 @@ aside {
   height: 260px;
   border-radius: 20px;
   margin: 0 0 20px 0;
-  .fas,
-  .fa-heart {
-    font-size: 2em;
-    margin: 0 25px 0 0;
-    color: #9356dc;
-  }
 }
+
+.e {
+  font-size: 2em;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background-color: #9356dc;
+}
+.f {
+  font-size: 2em;
+  margin: 0;
+  color: black;
+  visibility: hidden;
+}
+.e:hover {
+  visibility: hidden;
+}
+.e:hover + .f {
+  visibility: visible;
+}
+
 .img__cover {
   width: 330px;
   height: 190px;
