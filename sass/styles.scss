@@ -176,9 +176,9 @@ aside {
   color: #ff79da;
 }
 .fa-heart:hover {
-  font-weight: bolder;
-  color: #ff79da;
-  transition: 1000ms;
+  font-weight: 900;
+  /* color: #ff79da; */
+  transition: 2s;
 }
 
 .img__cover {
@@ -359,36 +359,52 @@ hr {
   height: 100%;
   position: absolute;
   z-index: 1000;
-  animation: test 5000ms;
+  animation: test 3s;
   animation-fill-mode: forwards;
   font-size: 3em;
+  background-color: #3b3b3b;
 }
-/* .test__text {
-  animation: beta 5000ms;
+.spinloader {
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+  margin: auto;
+  animation: load 3s;
+  animation-fill-mode: forwards;
 }
-@keyframes beta {
-  0% {
-    color: #99e2d0;
-  }
-  50% {
-    color: greenyellow;
-  }
-  100% {
-    display: none;
-    visibility: hidden;
-    font-size: 10px;
-  }
-} */
-@keyframes test {
-  0% {
-    background-color: red;
-  }
-  50% {
-    background-color: green;
+@keyframes load {
+  98% {
+    height: 200px;
+    width: 200px;
+    opacity: 50;
   }
   100% {
     width: 0%;
     height: 0%;
-    font-size: 0px;
+  }
+}
+@keyframes test {
+  50% {
+    background-color: green;
+  }
+  98% {
+    width: 100%;
+    height: 100%;
+    opacity: 50;
+    /*  font-display: none;
+    display: none; */
+    /* width: 0%;
+    height: 0%;
+    font-size: 0px; */
+  }
+  50% {
+    background-color: #ff79da;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
   }
 }
