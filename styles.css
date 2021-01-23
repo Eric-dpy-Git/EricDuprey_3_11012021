@@ -17,14 +17,16 @@
 }
 /* Général style */
 body {
-  /*  width: 360px; */
-  margin: 0;
+  min-width: 360px;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0;
   font-family: Roboto-R;
 }
 
 .page-wrapper {
   min-width: 360px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -125,7 +127,7 @@ aside {
 }
 
 .element__guidelines {
-  width: 90%;
+  max-width: 400px;
   height: 100px;
   border-radius: 20px;
   margin: 20px 10px 0 20px;
@@ -385,7 +387,7 @@ hr {
 
 .spinloader {
   height: 100%;
-  width: 100%;
+  max-width: 1440px;
   background: white;
   position: absolute;
   z-index: 1000;
@@ -518,6 +520,121 @@ hr {
     -webkit-transform: perspective(140px) rotateY(180deg);
     transform: perspective(140px) rotateY(180deg);
     opacity: 0;
+  }
+}
+.mb-1 {
+  animation: box-fade 2s;
+}
+
+@keyframes box-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mb-2 {
+  animation: box-fade 4s;
+}
+
+@keyframes box-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mb-3 {
+  animation: box-fade 6s;
+}
+
+@keyframes box-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mb-4 {
+  animation: box-fade 8s;
+}
+
+@keyframes box-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mb-5 {
+  animation: box-fade 10s;
+}
+
+@keyframes box-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mb-6 {
+  animation: box-fade 12s;
+}
+
+@keyframes box-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mb-7 {
+  animation: box-fade 14s;
+}
+
+@keyframes box-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mb-8 {
+  animation: box-fade 16s;
+}
+
+@keyframes box-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mb-9 {
+  animation: box-fade 18s;
+}
+
+@keyframes box-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .img__restaurant {
+    width: 1440px;
+    height: 400px;
+    margin: auto;
   }
 }
 
