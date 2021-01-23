@@ -355,8 +355,8 @@ hr {
   margin-right: auto; */
 }
 .loadingtest {
-  width: 100%;
-  height: 100%;
+  width: 0%;
+  height: 0%;
   position: absolute;
   z-index: 1000;
   animation: test 3s;
@@ -365,46 +365,49 @@ hr {
   background-color: #3b3b3b;
 }
 .spinloader {
-  height: 200px;
-  width: 200px;
+  height: 0px;
+  width: 0px;
   background-color: aqua;
-  margin: auto;
+  margin: 300px auto;
   animation: load 3s;
   animation-fill-mode: forwards;
 }
 @keyframes load {
-  98% {
+  0% {
     height: 200px;
     width: 200px;
-    opacity: 50;
+  }
+  99% {
+    height: 200px;
+    width: 200px;
+    opacity: 20;
   }
   100% {
     width: 0%;
     height: 0%;
+    opacity: 0%;
   }
 }
 @keyframes test {
-  50% {
-    background-color: green;
-  }
-  98% {
+  10% {
     width: 100%;
     height: 100%;
     opacity: 50;
-    /*  font-display: none;
-    display: none; */
-    /* width: 0%;
-    height: 0%;
-    font-size: 0px; */
   }
-  50% {
-    background-color: #ff79da;
+  90% {
+    width: 100%;
+    height: 100%;
+    opacity: 40;
   }
   99% {
-    opacity: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 20;
   }
+
   100% {
     width: 0%;
     height: 0%;
+    opacity: 0;
   }
 }
