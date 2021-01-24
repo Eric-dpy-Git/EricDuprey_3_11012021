@@ -23,6 +23,12 @@ body {
   padding: 0;
   font-family: Roboto-R;
 }
+.body-for-menu {
+  background-color: #f6f6f6;
+}
+.logodiv__title--menu {
+  font-family: Shriklhand-R;
+}
 .page-wrapper {
   min-width: 360px;
   max-width: 1440px;
@@ -108,10 +114,18 @@ header {
   border-radius: 20px;
   color: white;
 }
+
 /* Guidelines elements styles */
 .element__guidelines,
 .restaurant__box {
   box-shadow: 5px 5px 5px lightgray;
+}
+.element__guidelines:hover,
+.restaurant__box:hover,
+.meal__box:hover,
+.submit__btn:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 6px 6px lightgray;
 }
 aside {
   max-width: 100%;
@@ -119,7 +133,7 @@ aside {
 }
 
 .element__guidelines {
-  max-width: 400px;
+  width: 90%;
   height: 100px;
   border-radius: 20px;
   margin: 20px 10px 0 20px;
@@ -345,6 +359,26 @@ hr {
   background-color: white;
   box-shadow: 3px 3px 3px lightgray;
 }
+.overbox__box {
+  background-color: #99e2d0;
+  display: flex;
+  width: 100%;
+}
+.overbox {
+  width: 25%;
+  height: 70px;
+  margin: 15px 0;
+  border-radius: 0 20px 20px 0;
+  background-color: #9356dc;
+}
+.meal__box:hover {
+  width: 75%;
+
+  .overbox {
+    width: 25px;
+    height: 100%;
+  }
+}
 .meal__description,
 .meal__subdescription {
   padding: O 0 0 0;
@@ -362,16 +396,16 @@ hr {
 }
 
 .spinloader {
-  height: 120%;
+  height: 100%;
   max-width: 1440px;
-  background: blue;
+  background: white;
   position: absolute;
-  z-index: 2;
+  z-index: 1000;
   animation: load 3s;
   animation-fill-mode: forwards;
 }
 @keyframes load {
-  10% {
+  0% {
     height: 100%;
     width: 100%;
     opacity: 100%;
@@ -379,7 +413,7 @@ hr {
   30% {
     width: 100%;
     height: 100%;
-    opacity: 90%;
+    opacity: 100%;
   }
   95% {
     height: 100%;
@@ -611,5 +645,9 @@ hr {
     height: 400px;
     margin: auto;
     object-fit: cover;
+  }
+  .logodiv__title--menu {
+    margin-right: 300px;
+    font-family: Shriklhand-R;
   }
 }
