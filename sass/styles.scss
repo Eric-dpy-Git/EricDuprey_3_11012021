@@ -372,6 +372,10 @@ hr {
   border-radius: 0 20px 20px 0;
   background-color: #99e2d0;
 }
+.meal__box:hover .overbox {
+  /* display: block; */
+  animation: testanim 1s forwards;
+}
 .meal__box:active .overbox {
   /* display: block; */
   animation: testanim 1s forwards;
@@ -382,6 +386,9 @@ hr {
   margin: 20px 0;
   font-size: 2em;
   color: white;
+}
+.meal__box:hover .fa-check-circle {
+  animation: circle 1s forwards;
 }
 .meal__box:active .fa-check-circle {
   animation: circle 1s forwards;
