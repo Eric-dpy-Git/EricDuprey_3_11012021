@@ -122,7 +122,7 @@ header {
 }
 .element__guidelines:hover,
 .restaurant__box:hover,
-.meal__box:hover,
+/* .meal__box:hover, */
 .submit__btn:hover {
   transform: scale(1.1);
   box-shadow: 6px 6px 6px lightgray;
@@ -360,28 +360,56 @@ hr {
   box-shadow: 3px 3px 3px lightgray;
 }
 .overbox__box {
-  background-color: #99e2d0;
   display: flex;
   width: 100%;
 }
 .overbox {
-  width: 25%;
-  height: 70px;
-  margin: 15px 0;
+  text-align: center;
+  /* display: none; */
+  width: 0px;
+  height: 0px;
+  /*   margin: 15px 0; */
   border-radius: 0 20px 20px 0;
-  background-color: #9356dc;
+  background-color: #99e2d0;
 }
-.meal__box:hover {
-  width: 75%;
+.meal__box:active .overbox {
+  /* display: block; */
+  animation: testanim 1s forwards;
+}
 
-  .overbox {
-    width: 25px;
-    height: 100%;
+.fa-check-circle {
+  visibility: hidden;
+  margin: 20px 0;
+  font-size: 2em;
+  color: white;
+}
+.meal__box:active .fa-check-circle {
+  animation: circle 1s forwards;
+}
+@keyframes circle {
+  0% {
+    visibility: visible;
+    transform: rotate(180deg);
+  }
+  100% {
+    visibility: visible;
   }
 }
+
+@keyframes testanim {
+  from {
+    height: 100%;
+    width: 5%;
+  }
+  to {
+    height: 100%;
+    width: 25%;
+  }
+}
+
 .meal__description,
 .meal__subdescription {
-  padding: O 0 0 0;
+  padding: 0 0 0 0;
   margin: 0 0 0 15px;
 }
 .meal__box--price {
