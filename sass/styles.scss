@@ -368,17 +368,17 @@ hr {
   /* display: none; */
   width: 0px;
   height: 0px;
-  /*   margin: 15px 0; */
+  margin: 0 0 0 15px;
   border-radius: 0 20px 20px 0;
   background-color: #99e2d0;
 }
 .meal__box:hover .overbox {
   /* display: block; */
-  animation: testanim 1s forwards;
+  animation: testanim 400ms forwards ease;
 }
 .meal__box:active .overbox {
   /* display: block; */
-  animation: testanim 1s forwards;
+  animation: testanim 400ms forwards ease;
 }
 
 .fa-check-circle {
@@ -388,10 +388,10 @@ hr {
   color: white;
 }
 .meal__box:hover .fa-check-circle {
-  animation: circle 1s forwards;
+  animation: circle 400ms forwards ease;
 }
 .meal__box:active .fa-check-circle {
-  animation: circle 1s forwards;
+  animation: circle 400ms forwards ease;
 }
 @keyframes circle {
   0% {
@@ -410,10 +410,23 @@ hr {
   }
   to {
     height: 100%;
-    width: 25%;
+    width: 30%;
   }
 }
-
+.overflow {
+  width: 100%;
+  height: 20px;
+  margin: 0 0 0 10px;
+  overflow: auto;
+}
+.meal__box--text {
+  min-width: 50%;
+  max-width: 250px;
+  margin: 0 0 0 0;
+}
+.meal__description {
+  font-family: Roboto-B;
+}
 .meal__description,
 .meal__subdescription {
   padding: 0 0 0 0;
@@ -421,7 +434,8 @@ hr {
 }
 .meal__box--price {
   padding: 0;
-  margin: 0 15px 0 0;
+  margin: 20px 0 0 0;
+  font-family: Roboto-B;
 }
 .submit__btn--menu {
   margin: 20px auto 0 auto;
