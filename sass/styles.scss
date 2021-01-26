@@ -191,14 +191,34 @@ aside {
   border-radius: 20px;
   margin: 0 0 20px 0;
 }
-.far,
+/* .far,
 .fas:hover {
   color: #ff79da;
-}
-.fa-heart:hover {
+} */
+.vide:hover {
   font-weight: 900;
-  /* color: #ff79da; */
-  transition: 2s;
+  transform: scale(2);
+  transition-duration: 5s;
+
+  /* color: #ff79da;
+  transition: 2s; */
+  /*  animation: heartfil 4s; */
+}
+.heart__box:hover .plein {
+  opacity: 1;
+}
+
+@keyframes heartfil {
+  from {
+    opacity: 1;
+    color: red;
+  }
+
+  to {
+    opacity: 0;
+
+    color: green;
+  }
 }
 
 .img__cover {
@@ -396,6 +416,7 @@ hr {
 @keyframes circle {
   0% {
     visibility: visible;
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
   100% {
@@ -420,7 +441,7 @@ hr {
   overflow: auto;
 }
 .meal__box--text {
-  min-width: 50%;
+  min-width: 120px;
   max-width: 250px;
   margin: 0 0 0 0;
 }
@@ -434,7 +455,7 @@ hr {
 }
 .meal__box--price {
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0 20px;
   font-family: Roboto-B;
 }
 .submit__btn--menu {
@@ -442,6 +463,12 @@ hr {
   display: block;
   /* margin-left: auto;
   margin-right: auto; */
+}
+
+.description__text--price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .spinloader {
