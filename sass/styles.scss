@@ -23,12 +23,6 @@ body {
   padding: 0;
   font-family: Roboto-R;
 }
-.body-for-menu {
-  background-color: #f6f6f6;
-}
-.logodiv__title--menu {
-  font-family: Shriklhand-R;
-}
 .page-wrapper {
   min-width: 360px;
   max-width: 1440px;
@@ -40,16 +34,18 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-}
-.logodiv__title {
-  font-family: Shriklhand-R;
-  margin-right: 40px;
+  .responsive__left--part {
+    width: 700px;
+  }
 }
 .header__logodiv,
 .section__localization,
-.section__catchphrase,
-.element__guidelines {
+.section__catchphrase {
   text-align: center;
+}
+.logodiv__title {
+  font-family: Shriklhand-R;
+  margin-right: 50px;
 }
 .aside__title,
 .section__restaurant--title {
@@ -68,7 +64,6 @@ a:visited {
 .mail:link {
   color: white;
 }
-
 /* header, sections, aside, footer styles */
 header {
   max-width: 100%;
@@ -77,13 +72,13 @@ header {
   border-bottom: solid 3px rgb(214, 206, 206);
 }
 /* Localization section */
-// nestitng with Sass
 .section__localization {
   background-color: #eaeaea;
   width: 100%;
   min-width: 360px;
   height: 50px;
 }
+// nesting with Sass
 .form__localization {
   width: 100%;
   margin: 0 auto;
@@ -115,23 +110,27 @@ header {
   color: white;
 }
 
-/* Guidelines elements styles */
+/* ------- Guidelines elements styles----------*/
 .element__guidelines,
 .restaurant__box {
   box-shadow: 5px 5px 5px lightgray;
 }
 .element__guidelines:hover,
 .restaurant__box:hover,
-/* .meal__box:hover, */
+.meal__box:hover,
 .submit__btn:hover {
   transform: scale(1.1);
+  transition-duration: 400ms;
+  opacity: 0.8;
   box-shadow: 6px 6px 6px lightgray;
+  .guidlines__icon {
+    color: #9356dc;
+  }
 }
 aside {
-  max-width: 100%;
+  width: 100%;
   min-width: 360px;
 }
-
 .element__guidelines {
   width: 90%;
   height: 100px;
@@ -145,7 +144,7 @@ aside {
     height: 30px;
     border: none;
     border-radius: 100%;
-    background-color: #ff79da;
+    background-color: #9356dc;
     color: white;
     font-weight: bolder;
     margin: 45px 0 0 0;
@@ -159,25 +158,21 @@ aside {
     margin: 50px 50px 0 0;
   }
 }
-
-/* Restaurant section */
+/* ------- Guidelines elements styles----------*/
+/* ------------ Restaurant section ------------*/
 
 .section__restaurants {
   background-color: #f6f6f6;
   min-width: 330px;
   max-width: 720px;
-  max-height: 1350px;
   display: flex;
   flex-direction: column;
-
   justify-content: space-around;
-
   margin: 60px 0 0 0;
   padding: 0 0 40px 0;
 }
 .article__box {
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
@@ -191,36 +186,21 @@ aside {
   border-radius: 20px;
   margin: 0 0 20px 0;
 }
-/* .far,
-.fas:hover {
-  color: #ff79da;
-} */
-.vide:hover {
-  font-weight: 900;
-  transform: scale(2);
-  transition-duration: 5s;
-
-  /* color: #ff79da;
-  transition: 2s; */
-  /*  animation: heartfil 4s; */
-}
-.heart__box:hover .plein {
-  opacity: 1;
-}
-
-@keyframes heartfil {
-  from {
-    opacity: 1;
-    color: red;
-  }
-
-  to {
-    opacity: 0;
-
-    color: green;
+/* -------------Icons animations---------- */
+.heart__box {
+  margin: 5px 35px 0 0;
+  .fa-heart {
+    font-size: 24px;
+    color: #ff79da;
   }
 }
-
+.fa-heart:hover {
+  font-weight: bold;
+  transform: scale(1.8);
+  transition-duration: 1s;
+}
+/* -----------End icons animations--------- */
+/* ------------Restaurant section-----------*/
 .img__cover {
   width: 330px;
   height: 190px;
@@ -232,7 +212,6 @@ aside {
 .restaurant__description {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 0 0 15px;
   margin: 0;
   .restaurant__title {
@@ -261,7 +240,8 @@ aside {
   left: 235px;
   z-index: 1;
 }
-
+/* --------- End restaurant section ----------*/
+/* ---------------Footer section------------- */
 footer {
   background-color: #3b3b3b;
   max-width: 100%;
@@ -280,11 +260,11 @@ footer {
     }
   }
 }
-/* for menu pages */
-/* .main__box {
-  display: flex;
-  flex-wrap: wrap;
-} */
+/* ---------------Footer section------------- */
+/* -------spécial menus style-------- */
+.body-for-menu {
+  background-color: #f6f6f6;
+}
 .header__menu {
   max-width: 100%;
   min-width: 360px;
@@ -298,7 +278,7 @@ footer {
 .img__restaurant {
   max-width: 100%;
   min-width: 360px;
-  min-height: 350px;
+  min-height: 280px;
   max-height: 100%;
 }
 .article__responsive {
@@ -335,103 +315,49 @@ footer {
     height: fit-content;
   }
 }
-.heart__box {
-  margin: 5px 35px 0 0;
-  .fa-heart {
-    font-size: 24px;
-  }
-}
 .menu__part--box {
   width: 600px;
   min-width: 330px;
-}
-.menu__part {
-  width: 300px;
-  margin: 30px 0 0 20px;
-  /* border-bottom: solid #99e2d0 2px;
-  border-start-end-radius: 10px; */
-}
-hr {
-  width: 40px;
-  margin: 5px 0 0 20px;
-  height: 5px;
-  border: 0;
-  background-color: #99e2d0;
+  .menu__part {
+    width: 300px;
+    margin: 30px 0 0 20px;
+  }
+  /* for border under menu part */
+  hr {
+    width: 40px;
+    margin: 5px 0 0 20px;
+    height: 5px;
+    border: 0;
+    background-color: #99e2d0;
+  }
 }
 .flex__menu {
   min-width: 330px;
   max-width: 100%;
-  /* display: flex;*/
-  /* flex-wrap: wrap; */
-  /*justify-content: space-around; */
   margin: 10px 20px 0 20px;
   background-color: #f6f6f6;
-}
-
-.meal__box {
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
-  margin: 15px 0;
-  background-color: white;
-  box-shadow: 3px 3px 3px lightgray;
 }
 .overbox__box {
   display: flex;
   width: 100%;
-}
-.overbox {
-  text-align: center;
-  /* display: none; */
-  width: 0px;
-  height: 0px;
-  margin: 0 0 0 15px;
-  border-radius: 0 20px 20px 0;
-  background-color: #99e2d0;
-}
-.meal__box:hover .overbox {
-  /* display: block; */
-  animation: testanim 400ms forwards ease;
-}
-.meal__box:active .overbox {
-  /* display: block; */
-  animation: testanim 400ms forwards ease;
-}
-
-.fa-check-circle {
-  visibility: hidden;
-  margin: 20px 0;
-  font-size: 2em;
-  color: white;
-}
-.meal__box:hover .fa-check-circle {
-  animation: circle 400ms forwards ease;
-}
-.meal__box:active .fa-check-circle {
-  animation: circle 400ms forwards ease;
-}
-@keyframes circle {
-  0% {
-    visibility: visible;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+  .meal__box {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    margin: 15px 0;
+    background-color: white;
+    box-shadow: 3px 3px 3px lightgray;
   }
-  100% {
-    visibility: visible;
-  }
-}
-
-@keyframes testanim {
-  from {
-    height: 100%;
-    width: 5%;
-  }
-  to {
-    height: 100%;
-    width: 30%;
+  .overbox {
+    text-align: center;
+    width: 0px;
+    height: 0px;
+    margin: 0 0 0 15px;
+    border-radius: 0 20px 20px 0;
+    background-color: #99e2d0;
   }
 }
 .overflow {
@@ -458,11 +384,50 @@ hr {
   margin: 20px 0 0 20px;
   font-family: Roboto-B;
 }
+.fa-check-circle {
+  visibility: hidden;
+  margin: 20px 0;
+  font-size: 2em;
+  color: white;
+}
 .submit__btn--menu {
   margin: 20px auto 0 auto;
   display: block;
-  /* margin-left: auto;
-  margin-right: auto; */
+}
+/* -----end spécial menus style------  */
+
+/* -----------animations-------------- */
+.meal__box:hover .overbox {
+  animation: testanim 400ms forwards ease;
+}
+.meal__box:active .overbox {
+  animation: testanim 400ms forwards ease;
+}
+.meal__box:hover .fa-check-circle {
+  animation: circle 400ms forwards ease;
+}
+.meal__box:active .fa-check-circle {
+  animation: circle 400ms forwards ease;
+}
+@keyframes circle {
+  0% {
+    visibility: visible;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes testanim {
+  from {
+    height: 100%;
+    width: 5%;
+  }
+  to {
+    height: 100%;
+    width: 30%;
+  }
 }
 
 .description__text--price {
@@ -605,11 +570,10 @@ hr {
     opacity: 0;
   }
 }
-
+/* Animation for menus fading */
 .mb-1 {
   animation: box-fade 2s;
 }
-
 @keyframes box-fade {
   from {
     opacity: 0;
@@ -618,11 +582,9 @@ hr {
     opacity: 1;
   }
 }
-
 .mb-2 {
   animation: box-fade 4s;
 }
-
 @keyframes box-fade {
   from {
     opacity: 0;
@@ -634,7 +596,6 @@ hr {
 .mb-3 {
   animation: box-fade 6s;
 }
-
 @keyframes box-fade {
   from {
     opacity: 0;
@@ -646,7 +607,6 @@ hr {
 .mb-4 {
   animation: box-fade 8s;
 }
-
 @keyframes box-fade {
   from {
     opacity: 0;
@@ -658,7 +618,6 @@ hr {
 .mb-5 {
   animation: box-fade 10s;
 }
-
 @keyframes box-fade {
   from {
     opacity: 0;
@@ -670,7 +629,6 @@ hr {
 .mb-6 {
   animation: box-fade 12s;
 }
-
 @keyframes box-fade {
   from {
     opacity: 0;
@@ -682,7 +640,6 @@ hr {
 .mb-7 {
   animation: box-fade 14s;
 }
-
 @keyframes box-fade {
   from {
     opacity: 0;
@@ -694,7 +651,6 @@ hr {
 .mb-8 {
   animation: box-fade 16s;
 }
-
 @keyframes box-fade {
   from {
     opacity: 0;
@@ -707,15 +663,11 @@ hr {
   animation: box-fade 18s;
 }
 
-@keyframes box-fade {
-  from {
-    opacity: 0;
+/* ---------Responsive part--------------- */
+@media screen and (min-width: 1280px) {
+  .respon {
+    margin-right: 350px;
   }
-  to {
-    opacity: 1;
-  }
-}
-@media screen and (min-width: 1024px) {
   .img__restaurant {
     width: 1440px;
     height: 400px;
@@ -727,3 +679,4 @@ hr {
     font-family: Shriklhand-R;
   }
 }
+/* --------End Responsive part------------- */
