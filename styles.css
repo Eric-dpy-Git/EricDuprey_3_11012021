@@ -635,104 +635,50 @@ footer ul li {
   }
 }
 /* Animation for menus fading */
+@keyframes box-fade {
+  0% {
+    transform: translate3d(0px, 10px, 0px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 .mb-1 {
+  animation: box-fade 1s;
+}
+
+.mb-2 {
   animation: box-fade 2s;
 }
 
-@keyframes box-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.mb-3 {
+  animation: box-fade 3s;
 }
-.mb-2 {
+
+.mb-4 {
   animation: box-fade 4s;
 }
 
-@keyframes box-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.mb-5 {
+  animation: box-fade 5s;
 }
-.mb-3 {
+
+.mb-6 {
   animation: box-fade 6s;
 }
 
-@keyframes box-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.mb-7 {
+  animation: box-fade 7s;
 }
-.mb-4 {
+
+.mb-8 {
   animation: box-fade 8s;
 }
 
-@keyframes box-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.mb-5 {
-  animation: box-fade 10s;
-}
-
-@keyframes box-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.mb-6 {
-  animation: box-fade 12s;
-}
-
-@keyframes box-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.mb-7 {
-  animation: box-fade 14s;
-}
-
-@keyframes box-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.mb-8 {
-  animation: box-fade 16s;
-}
-
-@keyframes box-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .mb-9 {
-  animation: box-fade 18s;
+  animation: box-fade 9s;
 }
 
 /* ---------Responsive part--------------- */
