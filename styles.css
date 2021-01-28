@@ -15,7 +15,19 @@
   font-family: Roboto-T;
   src: url("fonts/Roboto-Thin.ttf");
 }
-/* Général style */
+/* ------------Variables----------------- */
+/* ---------Full page spinloader------------ */
+.spinloader {
+  height: 100%;
+  max-width: 1440px;
+  background: white;
+  position: absolute;
+  z-index: 1000;
+  animation: load 3s;
+  animation-fill-mode: forwards;
+}
+
+/* ----------------Général style------------- */
 body {
   min-width: 360px;
   max-width: 1440px;
@@ -73,7 +85,7 @@ a:visited {
   color: white;
 }
 
-/* header, sections, aside, footer styles */
+/* ------------header, sections, aside, footer styles----------- */
 header {
   max-width: 100%;
   min-width: 360px;
@@ -115,7 +127,7 @@ header {
 .submit__btn {
   width: 200px;
   height: 40px;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(#9356dc, #ff79da);
   border: none;
   border-radius: 20px;
   color: white;
@@ -395,16 +407,25 @@ footer ul li {
   background-color: #99e2d0;
 }
 
-.overflow {
+.description__text--price {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+}
+
+.overflow {
+  max-width: 250px;
   height: 20px;
   margin: 0 0 0 10px;
-  overflow: auto;
+  overflow: hidden;
+  /* Find trick on https://www.youtube.com/watch?v=HRBAXPSXfcM */
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .meal__box--text {
   min-width: 120px;
-  max-width: 250px;
+  max-width: 400px;
   margin: 0 0 0 0;
 }
 
@@ -454,6 +475,18 @@ footer ul li {
   animation: circle 400ms forwards ease;
 }
 
+.meal__box:hover .overflow {
+  animation: ellipsis-anim 400ms forwards ease;
+}
+
+@keyframes ellipsis-anim {
+  from {
+    width: 220px;
+  }
+  to {
+    width: 150px;
+  }
+}
 @keyframes circle {
   0% {
     visibility: visible;
@@ -474,22 +507,6 @@ footer ul li {
     width: 30%;
   }
 }
-.description__text--price {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.spinloader {
-  height: 100%;
-  max-width: 1440px;
-  background: white;
-  position: absolute;
-  z-index: 1000;
-  animation: load 3s;
-  animation-fill-mode: forwards;
-}
-
 @keyframes load {
   0% {
     height: 100%;
@@ -719,6 +736,11 @@ footer ul li {
 }
 
 /* ---------Responsive part--------------- */
+@media screen and (min-width: 425px) {
+  .overflow {
+    max-width: 340px;
+  }
+}
 @media screen and (min-width: 1280px) {
   .respon {
     margin-right: 350px;
