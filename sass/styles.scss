@@ -627,6 +627,15 @@ footer {
     max-width: 340px;
   }
 }
+@media screen and (min-width: 768px) {
+  .img__restaurant {
+    width: 7680px;
+    height: 400px;
+    margin: auto;
+    object-fit: cover;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .respon {
     margin-right: 350px;
