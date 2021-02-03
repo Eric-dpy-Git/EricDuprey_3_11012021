@@ -1,0 +1,220 @@
+/* -----------animations-------------- */
+
+/* ---------Full page spinloader------------ */
+.spinloader {
+  height: 100%;
+  max-width: 1440px;
+  background: white;
+  position: absolute;
+  z-index: 1000;
+  animation: load 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes load {
+  0% {
+    height: 100%;
+    width: 100%;
+    opacity: 100%;
+  }
+  30% {
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+  }
+  95% {
+    height: 100%;
+    width: 100%;
+    opacity: 80%;
+  }
+  98% {
+    height: 100%;
+    width: 100%;
+    opacity: 10%;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+    opacity: 0%;
+  }
+}
+
+/* Integrating and modifying loading spinner from : https://tobiasahlin.com/spinkit/ */
+.sk-folding-cube {
+  margin: 20px auto;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  top: 300px;
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.sk-folding-cube .sk-cube:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9356dc;
+  -webkit-animation: sk-foldCubeAngle 3s infinite linear both;
+  animation: sk-foldCubeAngle 3s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+  transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+  transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+  transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%,
+  10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-foldCubeAngle {
+  0%,
+  10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%,
+  75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+/* ---------checkbox in menu animation-------- */
+.meal__box:hover .overbox {
+  animation: testanim 400ms forwards ease;
+}
+.meal__box:active .overbox {
+  animation: testanim 400ms forwards ease;
+}
+.meal__box:hover .fa-check-circle {
+  animation: circle 400ms forwards ease;
+}
+.meal__box:active .fa-check-circle {
+  animation: circle 400ms forwards ease;
+}
+.meal__box:hover .overflow {
+  animation: ellipsis-anim 400ms forwards ease;
+}
+@keyframes ellipsis-anim {
+  from {
+    width: 220px;
+  }
+  to {
+    width: 150px;
+  }
+}
+@keyframes circle {
+  0% {
+    visibility: visible;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes testanim {
+  from {
+    height: 100%;
+    width: 5%;
+  }
+  to {
+    height: 100%;
+    width: 30%;
+  }
+}
+/* Menu fading animation */
+@keyframes box-fade {
+  0% {
+    transform: translate3d(0px, 10px, 0px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.mb-1 {
+  animation: box-fade 1s;
+}
+.mb-2 {
+  animation: box-fade 2s;
+}
+.mb-3 {
+  animation: box-fade 3s;
+}
+.mb-4 {
+  animation: box-fade 4s;
+}
+.mb-5 {
+  animation: box-fade 5s;
+}
+.mb-6 {
+  animation: box-fade 6s;
+}
+.mb-7 {
+  animation: box-fade 7s;
+}
+.mb-8 {
+  animation: box-fade 8s;
+}
+.mb-9 {
+  animation: box-fade 9s;
+}

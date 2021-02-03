@@ -1,33 +1,22 @@
 @charset "UTF-8";
+/* ----------------Général style------------- */
+/* font style */
 @font-face {
   font-family: Shriklhand-R;
-  src: url("fonts/Shrikhand-Regular.ttf");
+  src: url("../fonts/Shrikhand-Regular.ttf");
 }
 @font-face {
   font-family: Roboto-R;
-  src: url("fonts/Roboto-Regular.ttf");
+  src: url("../fonts/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: Roboto-B;
-  src: url("fonts/Roboto-Bold.ttf");
+  src: url("../fonts/Roboto-Bold.ttf");
 }
 @font-face {
   font-family: Roboto-T;
-  src: url("fonts/Roboto-Thin.ttf");
+  src: url("../fonts/Roboto-Thin.ttf");
 }
-/* ------------Variables----------------- */
-/* ---------Full page spinloader------------ */
-.spinloader {
-  height: 100%;
-  max-width: 1440px;
-  background: white;
-  position: absolute;
-  z-index: 1000;
-  animation: load 3s;
-  animation-fill-mode: forwards;
-}
-
-/* ----------------Général style------------- */
 body {
   min-width: 360px;
   max-width: 1440px;
@@ -85,7 +74,6 @@ a:visited {
   color: white;
 }
 
-/* ------------header, sections, aside, footer styles----------- */
 header {
   max-width: 100%;
   min-width: 360px;
@@ -278,26 +266,6 @@ aside {
 }
 
 /* --------- End restaurant section ----------*/
-/* ---------------Footer section------------- */
-footer {
-  background-color: #3b3b3b;
-  max-width: 100%;
-  min-width: 330px;
-  height: 200px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 30px 0 0 30px;
-}
-footer ul {
-  list-style-type: none;
-  padding: 0;
-}
-footer ul li {
-  padding: 5px 0;
-}
-
-/* ---------------Footer section------------- */
 /* -------spécial menus style-------- */
 .body-for-menu {
   background-color: #f6f6f6;
@@ -458,55 +426,112 @@ footer ul li {
 }
 
 /* -----end spécial menus style------  */
+/* ----------------Général style------------- */
+/* font style */
+@font-face {
+  font-family: Shriklhand-R;
+  src: url("../fonts/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto-R;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto-B;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: Roboto-T;
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+body {
+  min-width: 360px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Roboto-R;
+}
+
+.page-wrapper {
+  min-width: 360px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.responsive__wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.responsive__wrapper .responsive__left--part {
+  width: 700px;
+}
+
+.header__logodiv,
+.section__localization,
+.section__catchphrase {
+  text-align: center;
+}
+
+.logodiv__title {
+  font-family: Shriklhand-R;
+  margin-right: 50px;
+}
+
+.aside__title,
+.section__restaurant--title {
+  font-size: 26px;
+  font-family: Roboto-B;
+  margin: 30px 0 30px 10px;
+}
+
+/* no color & underline links */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+.mail:link {
+  color: white;
+}
+
+/* ---------------Footer section------------- */
+footer {
+  background-color: #3b3b3b;
+  max-width: 100%;
+  min-width: 330px;
+  height: 200px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 0 30px;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer ul li {
+  padding: 5px 0;
+}
+
 /* -----------animations-------------- */
-.meal__box:hover .overbox {
-  animation: testanim 400ms forwards ease;
+/* ---------Full page spinloader------------ */
+.spinloader {
+  height: 100%;
+  max-width: 1440px;
+  background: white;
+  position: absolute;
+  z-index: 1000;
+  animation: load 3s;
+  animation-fill-mode: forwards;
 }
 
-.meal__box:active .overbox {
-  animation: testanim 400ms forwards ease;
-}
-
-.meal__box:hover .fa-check-circle {
-  animation: circle 400ms forwards ease;
-}
-
-.meal__box:active .fa-check-circle {
-  animation: circle 400ms forwards ease;
-}
-
-.meal__box:hover .overflow {
-  animation: ellipsis-anim 400ms forwards ease;
-}
-
-@keyframes ellipsis-anim {
-  from {
-    width: 220px;
-  }
-  to {
-    width: 150px;
-  }
-}
-@keyframes circle {
-  0% {
-    visibility: visible;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  100% {
-    visibility: visible;
-  }
-}
-@keyframes testanim {
-  from {
-    height: 100%;
-    width: 5%;
-  }
-  to {
-    height: 100%;
-    width: 30%;
-  }
-}
 @keyframes load {
   0% {
     height: 100%;
@@ -634,7 +659,56 @@ footer ul li {
     opacity: 0;
   }
 }
-/* Animation for menus fading */
+/* ---------checkbox in menu animation-------- */
+.meal__box:hover .overbox {
+  animation: testanim 400ms forwards ease;
+}
+
+.meal__box:active .overbox {
+  animation: testanim 400ms forwards ease;
+}
+
+.meal__box:hover .fa-check-circle {
+  animation: circle 400ms forwards ease;
+}
+
+.meal__box:active .fa-check-circle {
+  animation: circle 400ms forwards ease;
+}
+
+.meal__box:hover .overflow {
+  animation: ellipsis-anim 400ms forwards ease;
+}
+
+@keyframes ellipsis-anim {
+  from {
+    width: 220px;
+  }
+  to {
+    width: 150px;
+  }
+}
+@keyframes circle {
+  0% {
+    visibility: visible;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes testanim {
+  from {
+    height: 100%;
+    width: 5%;
+  }
+  to {
+    height: 100%;
+    width: 30%;
+  }
+}
+/* Menu fading animation */
 @keyframes box-fade {
   0% {
     transform: translate3d(0px, 10px, 0px);

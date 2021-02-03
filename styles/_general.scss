@@ -1,0 +1,68 @@
+/* ----------------Général style------------- */
+/* font style */
+@font-face {
+  font-family: Shriklhand-R;
+  src: url("../fonts/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto-R;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto-B;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: Roboto-T;
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+
+body {
+  min-width: 360px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Roboto-R;
+}
+.page-wrapper {
+  min-width: 360px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.responsive__wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  .responsive__left--part {
+    width: 700px;
+  }
+}
+.header__logodiv,
+.section__localization,
+.section__catchphrase {
+  text-align: center;
+}
+.logodiv__title {
+  font-family: Shriklhand-R;
+  margin-right: 50px;
+}
+.aside__title,
+.section__restaurant--title {
+  font-size: 26px;
+  font-family: Roboto-B;
+  margin: 30px 0 30px 10px;
+}
+/* no color & underline links */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+.mail:link {
+  color: white;
+}
