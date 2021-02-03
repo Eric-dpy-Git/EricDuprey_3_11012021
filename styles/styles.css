@@ -75,6 +75,10 @@ a:visited {
   color: white;
 }
 
+figure {
+  margin: 0;
+}
+
 header {
   max-width: 100%;
   min-width: 360px;
@@ -519,6 +523,10 @@ a:visited {
 
 .mail:link {
   color: white;
+}
+
+figure {
+  margin: 0;
 }
 
 /* ---------------Footer section------------- */
