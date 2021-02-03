@@ -30,6 +30,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+/* 2 responsive part display */
 .responsive__wrapper {
   width: 100%;
   display: flex;
@@ -47,7 +48,7 @@ body {
 }
 .logodiv__title {
   font-family: Shriklhand-R;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 .aside__title,
 .section__restaurant--title {
@@ -57,12 +58,12 @@ body {
 }
 /* no color & underline links */
 a:link {
-  color: black;
+  color: $link;
   text-decoration: none;
 }
 a:visited {
-  color: black;
+  color: $link;
 }
 .mail:link {
-  color: white;
+  color: $link-on-dark;
 }

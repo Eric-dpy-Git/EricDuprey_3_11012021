@@ -1,11 +1,11 @@
 /* ---------------Footer section------------- */
 // Nesting with Sass
 footer {
-  background-color: #3b3b3b;
+  background-color: $xtradarkbackground;
   max-width: 100%;
   min-width: 330px;
   height: 200px;
-  color: white;
+  color: $link-on-dark;
   display: flex;
   flex-direction: column;
   padding: 30px 0 0 30px;

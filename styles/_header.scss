@@ -6,7 +6,7 @@ header {
 }
 /* Localization section */
 .section__localization {
-  background-color: #eaeaea;
+  background-color: $softbackground;
   width: 100%;
   min-width: 360px;
   height: 50px;
@@ -19,6 +19,6 @@ header {
   .localization__btn,
   .localization__field {
     border: none;
-    background-color: #eaeaea;
+    background-color: $softbackground;
   }
 }

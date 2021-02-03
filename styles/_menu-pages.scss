@@ -1,6 +1,6 @@
 /* -------spécial menus style-------- */
 .body-for-menu {
-  background-color: #f6f6f6;
+  background-color: $xtrasoftbackground;
 }
 .header__menu {
   max-width: 100%;
@@ -35,7 +35,7 @@
   border-radius: 40px 40px 0 0;
   position: relative;
   bottom: 60px;
-  background-color: #f6f6f6;
+  background-color: $xtrasoftbackground;
 }
 .restaurant__title--box {
   max-width: 100%;
@@ -72,7 +72,7 @@
   min-width: 330px;
   max-width: 100%;
   margin: 10px 20px 0 20px;
-  background-color: #f6f6f6;
+  background-color: $xtrasoftbackground;
 }
 .overbox__box {
   display: flex;
@@ -85,8 +85,8 @@
     align-items: center;
     border-radius: 20px;
     margin: 15px 0;
-    background-color: white;
-    box-shadow: 3px 3px 3px lightgray;
+    background-color: $link-on-dark;
+    box-shadow: 3px 3px 3px $shadow;
   }
   .overbox {
     text-align: center;
@@ -94,7 +94,7 @@
     height: 0px;
     margin: 0 0 0 15px;
     border-radius: 0 20px 20px 0;
-    background-color: #99e2d0;
+    background-color: $tertiaire;
   }
 }
 .description__text--price {
@@ -132,7 +132,7 @@
   visibility: hidden;
   margin: 20px 0;
   font-size: 2em;
-  color: white;
+  color: $link-on-dark;
 }
 .submit__btn--menu {
   margin: 20px auto 0 auto;
