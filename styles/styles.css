@@ -748,40 +748,45 @@ footer ul li {
     transform: translate3d(0, 0, 0);
   }
 }
+/* using @for rule */
+.mb-0 {
+  animation: box-fade 0ms;
+}
+
 .mb-1 {
-  animation: box-fade 1s;
+  animation: box-fade 900ms;
 }
 
 .mb-2 {
-  animation: box-fade 2s;
+  animation: box-fade 1800ms;
 }
 
 .mb-3 {
-  animation: box-fade 3s;
+  animation: box-fade 2700ms;
 }
 
 .mb-4 {
-  animation: box-fade 4s;
+  animation: box-fade 3600ms;
 }
 
 .mb-5 {
-  animation: box-fade 5s;
+  animation: box-fade 4500ms;
 }
 
 .mb-6 {
-  animation: box-fade 6s;
+  animation: box-fade 5400ms;
 }
 
 .mb-7 {
-  animation: box-fade 7s;
+  animation: box-fade 6300ms;
 }
 
 .mb-8 {
-  animation: box-fade 8s;
+  animation: box-fade 7200ms;
 }
 
 .mb-9 {
-  animation: box-fade 9s;
+  animation: box-fade 8100ms;
 }
 
 /* ---------Responsive part--------------- */
