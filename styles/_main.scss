@@ -25,6 +25,10 @@
 .restaurant__box {
   box-shadow: 5px 5px 5px $shadow;
 }
+.element__guidelines:hover {
+  transition-duration: 400ms;
+  background-color: $guidelinesHover;
+}
 .element__guidelines:hover,
 .restaurant__box:hover,
 .meal__box:hover,
