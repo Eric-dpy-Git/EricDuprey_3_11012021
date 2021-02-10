@@ -127,7 +127,7 @@
 @keyframes circle {
   0% {
     visibility: visible;
-    transform: rotate(180deg);
+    transform: rotate(-360deg);
   }
   100% {
     visibility: visible;

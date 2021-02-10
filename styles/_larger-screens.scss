@@ -1,12 +1,18 @@
 /* ---------Responsive part--------------- */
-@media screen and (min-width: 425px) {
+@media screen and (max-width: 425px) {
   .overflow {
     max-width: 340px;
+  }
+  .description__text--price {
+    min-width: 100px;
+  }
+  .menu__part--box {
+    width: 98%;
   }
 }
 @media screen and (min-width: 768px) {
   .img__restaurant {
-    width: 7680px;
+    width: 768px;
     height: 400px;
     margin: auto;
     object-fit: cover;

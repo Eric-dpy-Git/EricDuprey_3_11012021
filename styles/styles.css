@@ -141,7 +141,6 @@ header {
 
 .element__guidelines:hover,
 .restaurant__box:hover,
-.meal__box:hover,
 .submit__btn:hover {
   transform: scale(1.1);
   transition-duration: 400ms;
@@ -150,14 +149,12 @@ header {
 }
 .element__guidelines:hover .guidlines__icon,
 .restaurant__box:hover .guidlines__icon,
-.meal__box:hover .guidlines__icon,
 .submit__btn:hover .guidlines__icon {
   color: #9356dc;
 }
 
 .element__guidelines:active,
 .restaurant__box:active,
-.meal__box:active,
 .submit__btn:active {
   transform: scale(1.1);
   transition-duration: 400ms;
@@ -166,7 +163,6 @@ header {
 }
 .element__guidelines:active .guidlines__icon,
 .restaurant__box:active .guidlines__icon,
-.meal__box:active .guidlines__icon,
 .submit__btn:active .guidlines__icon {
   color: #9356dc;
 }
@@ -296,6 +292,7 @@ aside {
 /* --------- End restaurant section ----------*/
 /* -------spécial menus style-------- */
 .body-for-menu {
+  min-width: 375px;
   background-color: #f6f6f6;
 }
 
@@ -375,13 +372,14 @@ aside {
 .flex__menu {
   min-width: 330px;
   max-width: 100%;
-  margin: 10px 20px 0 20px;
+  margin: 10px 20px 0 0px;
   background-color: #f6f6f6;
 }
 
 .overbox__box {
+  margin: 0 auto;
   display: flex;
-  width: 100%;
+  width: 95%;
 }
 .overbox__box .meal__box {
   width: 100%;
@@ -693,7 +691,7 @@ footer ul li {
 @keyframes circle {
   0% {
     visibility: visible;
-    transform: rotate(180deg);
+    transform: rotate(-360deg);
   }
   100% {
     visibility: visible;
@@ -762,14 +760,22 @@ footer ul li {
 }
 
 /* ---------Responsive part--------------- */
-@media screen and (min-width: 425px) {
+@media screen and (max-width: 425px) {
   .overflow {
     max-width: 340px;
+  }
+
+  .description__text--price {
+    min-width: 100px;
+  }
+
+  .menu__part--box {
+    width: 98%;
   }
 }
 @media screen and (min-width: 768px) {
   .img__restaurant {
-    width: 7680px;
+    width: 768px;
     height: 400px;
     margin: auto;
     object-fit: cover;

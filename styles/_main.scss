@@ -31,7 +31,7 @@
 }
 .element__guidelines:hover,
 .restaurant__box:hover,
-.meal__box:hover,
+/* .meal__box:hover, */
 .submit__btn:hover {
   transform: scale(1.1);
   transition-duration: 400ms;
@@ -43,7 +43,7 @@
 }
 .element__guidelines:active,
 .restaurant__box:active,
-.meal__box:active,
+/* .meal__box:active, */
 .submit__btn:active {
   transform: scale(1.1);
   transition-duration: 400ms;
